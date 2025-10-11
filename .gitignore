@@ -1,0 +1,19 @@
+# ---- OS system files ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE / Editor settings ----
+.vscode/
+.idea/
+
+# ---- Build / dependency folders (if you use npm, vite, tailwind etc.) ----
+node_modules/
+dist/
+build/
+.env
+
+# ---- Logs & temp ----
+*.log
+*.tmp
+*.bak
+*.swp
