@@ -1,0 +1,179 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    box-sizing: border-box; /* Added box-sizing to manage padding */
+}
+
+/* Main container */
+.error-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    max-width: 480px;
+    width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Error Icon */
+.error-container .icon {
+    font-size: 90px;
+    color: #ff6347;
+    margin-bottom: 25px;
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+/* Header */
+h1 {
+    font-size: 50px;
+    margin: 20px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Error Message */
+.error-message {
+    font-size: 22px;
+    margin-bottom: 35px;
+    color: #dcdcdc;
+    text-transform: capitalize;
+}
+
+/* Button */
+.btn-home {
+    padding: 18px 35px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.btn-home:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-5px);
+}
+
+.btn-home:active {
+    transform: translateY(0);
+}
+
+/* Animation for the error icon */
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Subtle hover animation for the container */
+.error-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile-specific Styles */
+
+/* Mobile Portrait */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 15px; /* Added padding to prevent content from touching the edges */
+    }
+
+    .error-container {
+        padding: 30px;
+        max-width: 75%;
+        width: 100%;
+    }
+
+    .icon {
+        font-size: 70px;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    .error-message {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .btn-home {
+        padding: 15px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+    body {
+        padding: 0 20px; /* Added padding for landscape mode */
+    }
+
+    .error-container {
+        padding: 40px;
+        max-width: 80%;
+    }
+
+    .icon {
+        font-size: 80px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .error-message {
+        font-size: 20px;
+    }
+
+    .btn-home {
+        padding: 16px 30px;
+        font-size: 17px;
+    }
+}
+
+/* Large Mobile or Small Tablet (iPad, etc.) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        padding: 0 25px; /* Added padding for larger mobile/tablet screens */
+    }
+
+    .error-container {
+        max-width: 70%;
+        padding: 45px;
+    }
+
+    .icon {
+        font-size: 85px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .error-message {
+        font-size: 22px;
+    }
+
+    .btn-home {
+        padding: 18px 32px;
+        font-size: 18px;
+    }
+}
